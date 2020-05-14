@@ -7,8 +7,8 @@ const Photography = () => {
     <div className="container">
       <div className="row">
         {photos.map((photo) => (
-          <div className="col-md-3 col-sm-4 col-6 p-0 pr-3 pb-3">
-            <PhotoCard key={photo} photo={photo} />
+          <div className="col-md-3 col-sm-4 col-6 p-0 pr-3 pb-3" key={photo}>
+            <PhotoCard photo={photo} />
           </div>
         ))}
       </div>

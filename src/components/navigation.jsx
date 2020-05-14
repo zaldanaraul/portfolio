@@ -18,6 +18,12 @@ const Navigation = (props) => {
     leave: { opacity: 0, transform: "translateX(-100%)" },
   });
 
+  const menuMaskTransitions = useTransition(showMenu, null, {
+    from: { opacity: 0 },
+    enter: { opacity: 0.4 },
+    leave: { opacity: 0 },
+  });
+
   // component renders the navbar and the content of the menu variable
   return (
     <div className="pt-0">
@@ -29,11 +35,22 @@ const Navigation = (props) => {
               style={props}
               className="position-fixed mobile-menu pl-3"
             >
-              <Menu />
+              <Menu closeMenu={() => setShowMenu(false)} />
             </animated.div>
           )
       )}
-      <nav class="navbar navbar-light bg-light">
+      {menuMaskTransitions.map(
+        ({ item, key, props }) =>
+          item && (
+            <animated.div
+              key={key}
+              style={props}
+              className="position-fixed mobile-menu-mask"
+              onClick={() => setShowMenu(false)}
+            ></animated.div>
+          )
+      )}
+      <nav className="navbar navbar-light bg-light">
         <Brand />
         <FontAwesomeIcon icon={faBars} onClick={() => setShowMenu(!showMenu)} />
       </nav>

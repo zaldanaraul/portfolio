@@ -6,7 +6,7 @@ import Brand from "./brand";
 mobile versions. In the mobile version, the panel is hidden
 by default and slides into view when pressing the button on
 the Navbar */
-const Menu = () => {
+const Menu = (props) => {
   return (
     <ul className="nav flex-column">
       <li>
@@ -14,34 +14,30 @@ const Menu = () => {
       </li>
 
       <li className="nav-item">
-        <Link to="/aboutme">
-          <a className="nav-link active" href="#">
-            About Me
-          </a>
+        <Link to="/aboutme" onClick={props.closeMenu} className="nav-link">
+          About Me
         </Link>
       </li>
 
       <li className="nav-item">
-        <Link to="/projects">
-          <a className="nav-link" href="#">
-            Projects
-          </a>
+        <Link to="/projects" className="nav-link" onClick={props.closeMenu}>
+          Projects
         </Link>
       </li>
 
       <li className="nav-item">
-        <Link to="/photography">
-          <a className="nav-link" href="#">
-            Photography
-          </a>
+        <Link to="/photography" className="nav-link" onClick={props.closeMenu}>
+          Photography
         </Link>
       </li>
 
       <li className="nav-item">
-        <Link to="/generative-design">
-          <a className="nav-link" href="#">
-            Generative Design
-          </a>
+        <Link
+          to="/generative-design"
+          className="nav-link"
+          onClick={props.closeMenu}
+        >
+          Generative Design
         </Link>
       </li>
     </ul>

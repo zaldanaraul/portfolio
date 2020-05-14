@@ -10,7 +10,7 @@ import GenerativeDesign from "./views/generativeDesign";
 
 function App() {
   return (
-    <React.Fragment>
+    <div>
       <Router>
         <div className="d-block d-md-none">
           <Navigation />
@@ -57,7 +57,7 @@ function App() {
           </div>
         </div>
       </Router>
-    </React.Fragment>
+    </div>
   );
 }
 
