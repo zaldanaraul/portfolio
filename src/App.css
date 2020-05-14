@@ -13,8 +13,26 @@
 }
 
 .mobile-menu {
-  width: 50%;
+  width: 75%;
   height: 100%;
   z-index: 50;
   background-color: white;
+}
+
+ul.nav li a,
+ul.nav li a:visited {
+  color: black !important;
+}
+
+ul.nav li a:hover,
+ul.nav li a:active {
+  color: gray !important;
+}
+
+ul.nav li.active a {
+  color: purple !important;
+}
+
+.brand {
+  padding: 0.5rem 1rem !important;
 }

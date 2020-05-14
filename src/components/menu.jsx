@@ -4,9 +4,7 @@ const Menu = () => {
   return (
     <ul className="nav flex-column">
       <li>
-        <span className="navbar-brand" href="#">
-          Raul Zaldaña
-        </span>
+        <a className="brand">Raul Zaldaña</a>
       </li>
 
       <li className="nav-item">
