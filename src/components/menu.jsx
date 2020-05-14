@@ -1,31 +1,47 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
+/* This is the side-panel on the left in both the desktop and
+mobile versions. In the mobile version, the panel is hidden
+by default and slides into view when pressing the button on
+the Navbar */
 const Menu = () => {
   return (
     <ul className="nav flex-column">
       <li>
-        <a className="brand">Raul Zaldaña</a>
+        <h2 className="brand">raul zaldaña</h2>
       </li>
 
       <li className="nav-item">
-        <a className="nav-link active" href="#">
-          About Me
-        </a>
+        <Link to="/aboutme">
+          <a className="nav-link active" href="#">
+            About Me
+          </a>
+        </Link>
       </li>
+
       <li className="nav-item">
-        <a className="nav-link" href="#">
-          Projects
-        </a>
+        <Link to="/projects">
+          <a className="nav-link" href="#">
+            Projects
+          </a>
+        </Link>
       </li>
+
       <li className="nav-item">
-        <a className="nav-link" href="#">
-          Photography
-        </a>
+        <Link to="/photography">
+          <a className="nav-link" href="#">
+            Photography
+          </a>
+        </Link>
       </li>
+
       <li className="nav-item">
-        <a className="nav-link" href="#">
-          Generative Design
-        </a>
+        <Link to="/generative-design">
+          <a className="nav-link" href="#">
+            Generative Design
+          </a>
+        </Link>
       </li>
     </ul>
   );
