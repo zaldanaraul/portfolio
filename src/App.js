@@ -11,12 +11,12 @@ import GenerativeDesign from "./views/generativeDesign";
 function App() {
   return (
     <React.Fragment>
-      <div className="d-block d-md-none">
-        <Navigation />
-      </div>
-      <div className="pt-3">
-        {/* A React Router wraps around the main app component */}
-        <Router>
+      <Router>
+        <div className="d-block d-md-none">
+          <Navigation />
+        </div>
+        <div className="pt-3">
+          {/* A React Router wraps around the main app component */}
           {/*The Navbar and Menu components are within the router so that any components
           within them can have links to routes. However, they are outside the Switch */}
 
@@ -55,8 +55,8 @@ function App() {
               {/* This is where the content ends */}
             </div>
           </div>
-        </Router>
-      </div>
+        </div>
+      </Router>
     </React.Fragment>
   );
 }
