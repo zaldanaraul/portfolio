@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import Brand from "./brand";
 
 /* This is the side-panel on the left in both the desktop and
 mobile versions. In the mobile version, the panel is hidden
@@ -9,7 +10,7 @@ const Menu = () => {
   return (
     <ul className="nav flex-column">
       <li>
-        <h2 className="brand">raul zaldaña</h2>
+        <Brand />
       </li>
 
       <li className="nav-item">

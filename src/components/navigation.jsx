@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { useTransition, animated } from "react-spring";
 import Menu from "./menu";
+import Brand from "./brand";
+
 // Navbar (only visible in mobile version)
 // It also includes the sliding menu in the mobile version
 const Navigation = (props) => {
@@ -32,9 +34,7 @@ const Navigation = (props) => {
           )
       )}
       <nav class="navbar navbar-light bg-light">
-        <a class="navbar-brand" href="#">
-          Raul Zaldaña
-        </a>
+        <Brand />
         <FontAwesomeIcon icon={faBars} onClick={() => setShowMenu(!showMenu)} />
       </nav>
     </div>
