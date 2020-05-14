@@ -20,7 +20,7 @@ const Navigation = (props) => {
 
   // component renders the navbar and the content of the menu variable
   return (
-    <div>
+    <div className="pt-0">
       {menuTransitions.map(
         ({ item, key, props }) =>
           item && (
