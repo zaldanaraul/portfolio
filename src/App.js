@@ -31,6 +31,9 @@ function App() {
               {/*This is the div that contains the content*/}
               <div className="col-md-10 col-12">
                 <Switch>
+                  <Route exact path="/">
+                    <Photography />
+                  </Route>
                   {/* Route to photography view */}
                   <Route path="/photography">
                     <Photography />
