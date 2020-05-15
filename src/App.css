@@ -92,3 +92,12 @@ ul.nav li.active a {
     transform: rotate(360deg);
   }
 }
+
+.closeButton {
+  position: fixed;
+  top: 5%;
+  right: 5%;
+  z-index: 100;
+  font-size: 2em;
+  color: #e6e6e6;
+}

@@ -74,6 +74,7 @@ const Photography = () => {
                 setPhoto(photo);
                 console.log("hello");
               }}
+              closeMenu={() => setShowPhoto(false)}
             />
           </div>
         ))}

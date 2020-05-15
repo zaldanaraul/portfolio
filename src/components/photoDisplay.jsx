@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
 const PhotoDisplay = (props) => {
   let photo = props.photo;
@@ -25,6 +27,13 @@ const PhotoDisplay = (props) => {
       <div className="loader-wrapper">
         <div className="loader loader-photoDisplay" style={loaderStyle}></div>
       </div>
+
+      <FontAwesomeIcon
+        icon={faTimes}
+        onClick={props.closeDisplay}
+        className="closeButton"
+        style={style}
+      />
 
       <img
         className="full-image"
