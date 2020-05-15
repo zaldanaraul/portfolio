@@ -75,7 +75,7 @@ ul.nav li.active a {
   animation: spin 2s linear infinite;
 }
 
-.loader-photoDisplay {
+.loader-wrapper {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -86,13 +86,9 @@ ul.nav li.active a {
 
 @keyframes spin {
   0% {
-    transform-origin: center center;
-    transform: translate(-50%, -50%);
     transform: rotate(0deg);
   }
   100% {
-    transform-origin: center center;
-    transform: translate(-50%, -50%);
     transform: rotate(360deg);
   }
 }

@@ -22,7 +22,10 @@ const PhotoDisplay = (props) => {
   // it is done loading (through the onLoad prop)
   return (
     <div>
-      <div className="loader loader-photoDisplay" style={loaderStyle}></div>
+      <div className="loader-wrapper">
+        <div className="loader loader-photoDisplay" style={loaderStyle}></div>
+      </div>
+
       <img
         className="full-image"
         src={url}
