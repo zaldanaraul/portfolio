@@ -23,8 +23,8 @@ function App() {
           {/*The Menu and the content both sit within a container and row div so that they
         can be arranged as columns */}
           <div className="container-fluid">
-            <div className="row">
-              <div className="col-md-2 d-none d-md-block">
+            <div className="row justify-content-end">
+              <div className="position-fixed menu d-none d-md-block">
                 <Menu />
               </div>
 
