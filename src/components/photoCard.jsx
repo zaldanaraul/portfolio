@@ -5,9 +5,7 @@ const PhotoCard = (props) => {
   let url = `https://zaldanaraul.s3.ca-central-1.amazonaws.com/thumbnails/${photo}.jpg`;
 
   return (
-    <div className="image">
-      <img className="img-fluid" src={url} />
-    </div>
+    <img className="img-fluid hover-invert" src={url} onClick={props.onClick} />
   );
 };
 

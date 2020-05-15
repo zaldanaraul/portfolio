@@ -52,7 +52,12 @@ const Navigation = (props) => {
       )}
       <nav className="navbar navbar-light bg-light">
         <Brand />
-        <FontAwesomeIcon icon={faBars} onClick={() => setShowMenu(!showMenu)} />
+        <FontAwesomeIcon
+          icon={faBars}
+          onClick={() => {
+            setShowMenu(!showMenu);
+          }}
+        />
       </nav>
     </div>
   );
