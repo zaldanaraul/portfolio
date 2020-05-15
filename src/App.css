@@ -62,4 +62,5 @@ ul.nav li.active a {
   margin-top: -50%;*/
   height: auto;
   z-index: 50;
+  transition: opacity 0.5s;
 }

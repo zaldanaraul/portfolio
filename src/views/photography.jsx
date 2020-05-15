@@ -37,39 +37,33 @@ const Photography = () => {
   const [photo, setPhoto] = useState(null);
   const [showPhoto, setShowPhoto] = useState(false);
 
-  {
-    /* if (showPhoto) {
+  if (showPhoto) {
     photoDisplay = (
       <PhotoDisplay photo={photo} closeDisplay={() => setShowPhoto(false)} />
     );
-  }*/
   }
 
-  const MaskTransitions = useTransition(showPhoto, null, {
+  const menuMaskTransitions = useTransition(showPhoto, null, {
     from: { opacity: 0 },
-    enter: { opacity: 1 },
+    enter: { opacity: 0.4 },
     leave: { opacity: 0 },
   });
 
   return (
     <div className="container">
-      {MaskTransitions.map(
+      {menuMaskTransitions.map(
         ({ item, key, props }) =>
           item && (
             <animated.div
               key={key}
               style={props}
-              onClick={props.closeDisplay}
-              style={{ zIndex: 100 }}
+              className="position-fixed mobile-menu-mask"
               onClick={() => setShowPhoto(false)}
-            >
-              <PhotoDisplay
-                photo={photo}
-                closeDisplay={() => console.log("hello")}
-              />
-            </animated.div>
+            ></animated.div>
           )
       )}
+      {photoDisplay}
+
       <div className="row">
         {photos.map((photo) => (
           <div className="col-md-3 col-sm-4 col-6 p-0 pr-3 pb-3" key={photo}>
