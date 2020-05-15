@@ -38,9 +38,14 @@ ul.nav li a:visited {
   color: black !important;
 }
 
+ul.nav li a,
+ul.nav li a {
+  transition: color 0.5s;
+}
+
 ul.nav li a:hover,
 ul.nav li a:active {
-  color: gray !important;
+  color: #c7c7c7 !important;
 }
 
 ul.nav li.active a {
@@ -100,4 +105,9 @@ ul.nav li.active a {
   z-index: 100;
   font-size: 2em;
   color: #e6e6e6;
+  transition: color 0.5s;
+}
+
+.closeButton:hover {
+  color: #8f8f8f;
 }
