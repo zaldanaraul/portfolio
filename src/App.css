@@ -28,7 +28,7 @@
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 49;
+  z-index: 30;
   background-color: black;
   opacity: 0.2;
 }
@@ -63,4 +63,36 @@ ul.nav li.active a {
   height: auto;
   z-index: 50;
   transition: opacity 0.5s;
+}
+
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid gray; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+
+  animation: spin 2s linear infinite;
+}
+
+.loader-photoDisplay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 40;
+  transition: opacity 0.5s;
+}
+
+@keyframes spin {
+  0% {
+    transform-origin: center center;
+    transform: translate(-50%, -50%);
+    transform: rotate(0deg);
+  }
+  100% {
+    transform-origin: center center;
+    transform: translate(-50%, -50%);
+    transform: rotate(360deg);
+  }
 }
