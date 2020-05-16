@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Brand from "./brand";
 
 /* This is the side-panel on the left in both the desktop and
@@ -14,31 +14,47 @@ const Menu = (props) => {
       </li>
 
       <li className="nav-item">
-        <Link to="/aboutme" onClick={props.closeMenu} className="nav-link">
+        <NavLink
+          to="/aboutme"
+          onClick={props.closeMenu}
+          className="nav-link"
+          activeClassName="active"
+        >
           About Me
-        </Link>
+        </NavLink>
       </li>
 
       <li className="nav-item">
-        <Link to="/projects" className="nav-link" onClick={props.closeMenu}>
+        <NavLink
+          to="/projects"
+          className="nav-link"
+          activeClassName="active"
+          onClick={props.closeMenu}
+        >
           Projects
-        </Link>
+        </NavLink>
       </li>
 
       <li className="nav-item">
-        <Link to="/photography" className="nav-link" onClick={props.closeMenu}>
+        <NavLink
+          to="/photography"
+          className="nav-link"
+          activeClassName="active"
+          onClick={props.closeMenu}
+        >
           Photography
-        </Link>
+        </NavLink>
       </li>
 
       <li className="nav-item">
-        <Link
+        <NavLink
           to="/generative-design"
           className="nav-link"
+          activeClassName="active"
           onClick={props.closeMenu}
         >
           Generative Design
-        </Link>
+        </NavLink>
       </li>
     </ul>
   );

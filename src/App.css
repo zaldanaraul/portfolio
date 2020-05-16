@@ -45,11 +45,11 @@ ul.nav li a {
 
 ul.nav li a:hover,
 ul.nav li a:active {
-  color: #c7c7c7 !important;
+  color: #858585 !important;
 }
 
-ul.nav li.active a {
-  color: purple !important;
+ul.nav li a.active {
+  color: #210791 !important;
 }
 
 .brand {
