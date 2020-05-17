@@ -1,6 +1,19 @@
+mark {
+  background-color: #f9f2ff !important;
+}
+
 .main {
-  width: 75%;
-  margin-left: 0;
+  padding-top: 0;
+}
+
+@media (min-width: 768px) {
+  .main {
+    padding-top: 5%;
+  }
+
+  .copy {
+    padding-top: 1em;
+  }
 }
 
 .interest {
@@ -12,4 +25,10 @@
   width: 20%;
   height: auto;
   padding: 5%;
+}
+
+.copy {
+  padding-right: 0;
+  padding-left: 0;
+  padding-top: 1em;
 }

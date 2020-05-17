@@ -33,7 +33,7 @@ function App() {
             </div>
 
             {/*This is the div that contains the content*/}
-            <div className="col-md-10 col-12">
+            <div className="col-md-10 col-12 content-div">
               <Switch>
                 <Route exact path="/">
                   <Photography />
