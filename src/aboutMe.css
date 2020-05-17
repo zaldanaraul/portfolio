@@ -1,0 +1,15 @@
+.main {
+  width: 75%;
+  margin-left: 0;
+}
+
+.interest {
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+}
+
+.tech-logo {
+  width: 20%;
+  height: auto;
+  padding: 5%;
+}

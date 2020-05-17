@@ -56,6 +56,14 @@ ul.nav li a.active {
   padding: 0.5rem 1rem !important;
 }
 
+.social-media {
+  color: black !important;
+}
+
+.social-media:hover {
+  color: #210791 !important;
+}
+
 .full-image {
   position: fixed;
   left: 50%;
