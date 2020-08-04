@@ -1,5 +1,11 @@
+::selection,
+::-moz-selection {
+  background-color: #f9f2ff !important;
+}
+
 .content-div {
-  height: 100%;
+  /* height is 98% because 100% makes a scrollbar appear */
+  height: 95%;
   position: absolute;
 }
 
