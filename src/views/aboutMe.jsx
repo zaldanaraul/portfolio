@@ -14,8 +14,8 @@ const AboutMe = () => {
         <div className="row h-100">
           <div className="col-md-5 col-12">
             <img
-              src="https://zaldanaraul.s3.ca-central-1.amazonaws.com/photos/profile.jpg"
-              className="img-fluid profile-photo"
+              src="https://zaldanaraul.s3.ca-central-1.amazonaws.com/thumbnails/profile.jpg"
+              className="img-fluid profile-photo shadow"
             />
           </div>
           <div className="col-md-5 col-12 text-justify">
