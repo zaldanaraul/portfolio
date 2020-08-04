@@ -1,38 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PhotoCard from "../components/photoCard";
 import PhotoDisplay from "../components/photoDisplay";
 import { useTransition, animated } from "react-spring";
+import Axios from "axios";
 
 const Photography = () => {
-  let photos = [
-    1,
-    2,
-    3,
-    4,
-    5,
-    6,
-    11,
-    8,
-    9,
-    3,
-    1,
-    2,
-    1,
-    2,
-    3,
-    4,
-    5,
-    10,
-    11,
-    8,
-    9,
-    3,
-    1,
-    2,
-  ];
+
+  const [photos, setPhotos] = useState([]);
+
+
+
+  useEffect(() => {
+    const getPhotos = async () => {
+      try {
+        var response = await Axios.get("https://qjd1on9me1.execute-api.ca-central-1.amazonaws.com/dev/photos");
+        setPhotos(response.data);
+        console.log(photos);
+      } catch (error) {
+        console.error(error)
+      }
+    }
+    getPhotos();
+  }, []);
+
 
   // state to display photos individually
-  // this will contain the elemet that displays a photo individually over a dark background
+  // this will contain the element that displays a photo individually over a dark background
   let photoDisplay;
   const [photo, setPhoto] = useState(null);
   const [showPhoto, setShowPhoto] = useState(false);

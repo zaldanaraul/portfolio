@@ -4,7 +4,7 @@ import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
 const PhotoDisplay = (props) => {
   let photo = props.photo;
-  let url = `https://zaldanaraul.s3.ca-central-1.amazonaws.com/photos/${photo}.jpg`;
+  let url = photo.fullSizeUrl;
   let style = { opacity: 0 };
   let loaderStyle = { opacity: 1 };
 
