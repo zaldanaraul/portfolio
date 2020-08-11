@@ -13,6 +13,9 @@ const Projects = () => {
   ];
   return (
     <React.Fragment>
+      <h1>Projects</h1>
+      <p>This page is still under construction but you can look at some of my projects on my <a href="https://github.com/zaldanaraul?tab=repositories" target="_blank">Github page</a></p>
+      <p>Images and text below are just for illustration purposes</p>
       {projects.map((project) => {
         return <ProjectCard project={project} key={project.id} />;
       })}

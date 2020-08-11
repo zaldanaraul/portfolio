@@ -85,7 +85,7 @@ const Menu = (props) => {
         </a>
         <a
           className="col-12 mt-2 mb-2 social-media"
-          href="https://github.com/zaldanaraul"
+          href="https://github.com/zaldanaraul?tab=repositories"
           target="_blank"
         >
           <FontAwesomeIcon style={{ fontSize: "1.5em" }} icon={faGithub} />
