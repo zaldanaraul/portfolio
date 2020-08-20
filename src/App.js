@@ -12,6 +12,7 @@ import {
 import AboutMe from "./views/aboutMe";
 import Projects from "./views/projects";
 import GenerativeDesign from "./views/generativeDesign";
+import DesignDetail from "./views/designDetail";
 
 function App() {
   return (
@@ -56,6 +57,11 @@ function App() {
                 {/* Route to Generative Design view */}
                 <Route path="/generative-design">
                   <GenerativeDesign />
+                </Route>
+
+                {/* Route to Design Detal */}
+                <Route path="/design-detail">
+                  <DesignDetail></DesignDetail>
                 </Route>
               </Switch>
             </div>

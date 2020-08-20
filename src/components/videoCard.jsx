@@ -5,13 +5,15 @@ const VideoCard = (props) => {
   let url = props.video.url;
 
   return (
-    <video
-      onMouseOver={(e) => e.target.play()}
-      onMouseOut={(e) => e.target.pause()}
-      src={url}
-      loop={true}
-      className="img-fluid shadow"
-    />
+    <a href="/design-detail">
+      <video
+        onMouseOver={(e) => e.target.play()}
+        onMouseOut={(e) => e.target.pause()}
+        src={url}
+        loop={true}
+        className="img-fluid shadow"
+      />
+    </a>
   );
 };
 

@@ -1,0 +1,28 @@
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}
+
+.top-banner {
+  width: 100%;
+  height: 25vh;
+}
+
+.top-banner-photo {
+  width: 100%;
+  height: 25vh;
+  object-fit: cover;
+}
+
+.design-detail-container {
+  margin-top: -1rem;
+}
+
+.myIframe {
+  display: block;
+  background-color: black;
+  margin: auto;
+  width: 50vw;
+  height: 62.5vw;
+}
