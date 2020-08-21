@@ -1,8 +1,10 @@
-import React, { useState } from "react";
-import VideoCard from "../components/videoCard";
+import React, { useState, useEffect } from "react";
+import DesignCard from "../components/designCard";
+import Axios from "axios";
 
 const GenerativeDesign = () => {
-  const [videos, setVideos] = useState([
+  /*
+  const [designs, setDesigns] = useState([
     {
       url:
         "https://zaldanaraul.s3.ca-central-1.amazonaws.com/final_5f3d525472fd8200151f788d_690551.mp4",
@@ -20,29 +22,40 @@ const GenerativeDesign = () => {
         "https://zaldanaraul.s3.ca-central-1.amazonaws.com/final_5f3d7962df7ba0001595d60f_230711.mp4",
     },
   ]);
+  */
 
-  /*
-      <h1>This is the Generative Design page</h1>
-      <p>
-        This page is still under construction but you can look at some of my
-        generative art on my{" "}
-        <a href="https://www.instagram.com/ralzal/" target="_blank">
-          Instagram page
-        </a>
-      </p>
-      */
+  const [designs, setDesigns] = useState([]);
+
+  useEffect(() => {
+    const getDesigns = async () => {
+      try {
+        var response = await Axios.get(
+          "https://0ctuwq7814.execute-api.ca-central-1.amazonaws.com/dev/designs"
+        );
+        setDesigns(
+          response.data.sort((a, b) => {
+            return a.id - b.id;
+          })
+        );
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    getDesigns();
+  }, []);
 
   return (
     <React.Fragment>
       <div className="container">
         <div className="row">
-          {videos.map((video) => {
+          {designs.map((design) => {
             return (
               <div
                 className="col-md-3 col-sm-4 col-6 p-0 pr-3 pb-3"
-                key={video.url}
+                key={design.id}
               >
-                <VideoCard video={video}></VideoCard>
+                <DesignCard design={design} key={design.id}></DesignCard>
               </div>
             );
           })}

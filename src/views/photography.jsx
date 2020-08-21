@@ -5,25 +5,23 @@ import { useTransition, animated } from "react-spring";
 import Axios from "axios";
 
 const Photography = () => {
-
   const [photos, setPhotos] = useState([]);
-
-
 
   useEffect(() => {
     const getPhotos = async () => {
       try {
-        var response = await Axios.get("https://qjd1on9me1.execute-api.ca-central-1.amazonaws.com/dev/photos");
+        var response = await Axios.get(
+          "https://qjd1on9me1.execute-api.ca-central-1.amazonaws.com/dev/photos"
+        );
         setPhotos(response.data);
-        console.log(photos);
       } catch (error) {
-        console.error(error)
+        console.error(error);
       }
-    }
+    };
     getPhotos();
   }, []);
 
-
+  console.log(photos);
   // state to display photos individually
   // this will contain the element that displays a photo individually over a dark background
   let photoDisplay;
@@ -59,7 +57,7 @@ const Photography = () => {
 
       <div className="row">
         {photos.map((photo) => (
-          <div className="col-md-3 col-sm-4 col-6 p-0 pr-3 pb-3" key={photo}>
+          <div className="col-md-3 col-sm-4 col-6 p-0 pr-3 pb-3" key={photo.id}>
             <PhotoCard
               photo={photo}
               onClick={() => {

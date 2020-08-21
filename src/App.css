@@ -130,3 +130,7 @@ ul.nav li a.active {
 .closeButton:hover {
   color: #8f8f8f;
 }
+
+.background-white {
+  background-color: white;
+}

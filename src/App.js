@@ -59,8 +59,8 @@ function App() {
                   <GenerativeDesign />
                 </Route>
 
-                {/* Route to Design Detal */}
-                <Route path="/design-detail">
+                {/* Route to Design Detail */}
+                <Route path="/design-detail/:id">
                   <DesignDetail></DesignDetail>
                 </Route>
               </Switch>

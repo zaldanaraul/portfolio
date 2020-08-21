@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
+import { useParams, useLocation } from "react-router-dom";
 
 import "../aboutMe.css";
 import "../css/designDetail.css";
+import { isCompositeComponent } from "react-dom/test-utils";
 
 /* let newvar = `<div className="row">
 <div className="col-12 top-banner">
@@ -13,17 +15,45 @@ import "../css/designDetail.css";
 </div>
 </div>`; */
 
-const DesignDetail = () => {
+const DesignDetail = (props) => {
   const [content, setContent] = useState();
 
+  let { id } = useParams();
+
+  // NOTE: Instead of retrieving the appropriate url every time this page loads,
+  // I could have just passed the URL from the GenerativeDesign view since
+  // I load all the designs and their URLs in that page.
+  // However, that would mean that I would ALWAYS have to load that page before this one
+  // and any links to this page just wouldn't work since they wouldn't have the appropriate URL
   useEffect(() => {
-    const getContent = async () => {
+    // get the url where content html is stored
+    const getContentUrl = async () => {
       try {
         var response = await Axios.get(
-          "https://zaldanaraul.s3.ca-central-1.amazonaws.com/code_inside2.html"
+          `https://0ctuwq7814.execute-api.ca-central-1.amazonaws.com/dev/design/${id}`
         );
+        return response.data;
+      } catch (error) {
+        console.error(error);
+        return "error";
+      }
+    };
+
+    // get the actual html from the retrieved choice
+    const getContent = async () => {
+      try {
+        var url = await getContentUrl();
+
+        if (!url) {
+          setContent(
+            "I'm still working on the write-up for this project. Please check back soon!"
+          );
+          return;
+        }
+
+        console.log(url);
+        var response = await Axios.get(url);
         setContent(response.data.replace(/className/g, "class"));
-        console.log(content);
       } catch (error) {
         console.error(error);
       }

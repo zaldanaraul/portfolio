@@ -1,20 +1,21 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../projects.css";
 
-const VideoCard = (props) => {
-  let url = props.video.url;
+const DesignCard = (props) => {
+  let design = props.design;
 
   return (
-    <a href="/design-detail">
+    <Link to={`/design-detail/${design.id}`}>
       <video
         onMouseOver={(e) => e.target.play()}
         onMouseOut={(e) => e.target.pause()}
-        src={url}
+        src={design.thumbnail}
         loop={true}
         className="img-fluid shadow"
       />
-    </a>
+    </Link>
   );
 };
 
-export default VideoCard;
+export default DesignCard;
